@@ -41,6 +41,10 @@
         width: 100%;
         // Este height fue por el espacio debajo de las imagenes, no es parte del curso
         height: 42.5vh;
+
+        @include respond(phone) {  // width < 900?
+            display: block;
+        }
     }
 
     &__text {
@@ -59,6 +63,11 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {  // width < 900?
+            column-count: 1;
+            margin-bottom: 2rem;
+        }
     }
 
     // Open States
